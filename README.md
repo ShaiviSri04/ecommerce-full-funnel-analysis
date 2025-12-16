@@ -147,23 +147,48 @@ Each dashboard is designed to answer **one clear business question**.
 
 ## 📁 Project Structure
 
-ecommerce-full-funnel-analysis/
+```text
+├── Data
+│   ├── cart_events.csv
+│   ├── customers.csv
+│   ├── order_items.csv
+│   ├── orders.csv
+│   ├── products.csv
+│   └── sessions.csv
 │
-├── Data/           # Original raw datasets (CSV files from Kaggle)
+├── Excel
+│   └── Executive_Overview.xlsx
 │
-├── Excel/          # Data cleaning, EDA, funnel logic, helper calculations
+├── Insights
+│   └── Insights.md
 │
-├── SQL/            # BigQuery SQL queries (views, funnel logic, RFM, product analysis)
+├── Power BI
+│   └── Dashboard_Ecommerce.pbix
 │
-├── PowerBI/        # Power BI dashboard (.pbix file)
+├── SQL
+│   ├── base.sql
+│   ├── customer_frequency.sql
+│   ├── customer_monetary.sql
+│   ├── customer_recency.sql
+│   ├── drop_off.sql
+│   ├── funnel.sql
+│   ├── funnel_base.sql
+│   ├── product_dashboard.sql
+│   ├── product_engagement.sql
+│   ├── product_performance.sql
+│   ├── product_revenue.sql
+│   ├── product_thresholds.sql
+│   ├── session_atc.sql
+│   └── session_views.sql
 │
-├── Insights/       # Written business insights & recommendations (Markdown)
-│
-├── Screenshots/    # Dashboard and chart screenshots
+├── Screenshots
+│   ├── Business_Summary.png
+│   ├── Checkout_Drop.png
+│   ├── Customer_Analytics.png
+│   └── Funnel_&_Dropoff.png
 │
 └── README.md
-
-
+```
 
 ---
 
