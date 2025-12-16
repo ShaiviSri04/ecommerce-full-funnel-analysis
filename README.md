@@ -149,13 +149,20 @@ Each dashboard is designed to answer **one clear business question**.
 
 ecommerce-full-funnel-analysis/
 │
-├── Data/           # Original raw dataset (CSV files)
-├── Excel/          # Data cleaning, EDA & funnel logic
-├── SQL/            # BigQuery SQL queries (views & analysis)
-├── PowerBI/        # Power BI dashboard (.pbix)
-├── Insights/       # Written business insights & conclusions
-├── Screenshots/    # Dashboard preview images
+├── Data/           # Original raw datasets (CSV files from Kaggle)
+│
+├── Excel/          # Data cleaning, EDA, funnel logic, helper calculations
+│
+├── SQL/            # BigQuery SQL queries (views, funnel logic, RFM, product analysis)
+│
+├── PowerBI/        # Power BI dashboard (.pbix file)
+│
+├── Insights/       # Written business insights & recommendations (Markdown)
+│
+├── Screenshots/    # Dashboard and chart screenshots
+│
 └── README.md
+
 
 
 ---
