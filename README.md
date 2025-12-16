@@ -147,16 +147,16 @@ Each dashboard is designed to answer **one clear business question**.
 
 ## 📁 Project Structure
 
-```
 ecommerce-full-funnel-analysis/
 │
-├── Excel/          # Data cleaning & funnel logic
-├── SQL/            # BigQuery queries
-├── PowerBI/        # Dashboard files
-├── Insights/       # Business insights
-├── Screenshots/    # Dashboard previews
+├── Data/           # Original raw dataset (CSV files)
+├── Excel/          # Data cleaning, EDA & funnel logic
+├── SQL/            # BigQuery SQL queries (views & analysis)
+├── PowerBI/        # Power BI dashboard (.pbix)
+├── Insights/       # Written business insights & conclusions
+├── Screenshots/    # Dashboard preview images
 └── README.md
-```
+
 
 ---
 
