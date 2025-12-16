@@ -148,46 +148,57 @@ Each dashboard is designed to answer **one clear business question**.
 ## 📁 Project Structure
 
 ```text
-├── Data
-│   ├── cart_events.csv
-│   ├── customers.csv
-│   ├── order_items.csv
-│   ├── orders.csv
-│   ├── products.csv
-│   └── sessions.csv
+ecommerce-full-funnel-analysis/
 │
-├── Excel
+├── Data/
+│   ├── cart_events.csv        # User-level product interactions (views & add-to-cart events)
+│   ├── customers.csv          # Customer master data (demographics & signup info)
+│   ├── order_items.csv        # Line-level order details (products per order)
+│   ├── orders.csv             # Order-level purchase data (used for revenue & RFM)
+│   ├── products.csv           # Product catalog with pricing & category information
+│   └── sessions.csv           # Session-level traffic data (device, source, timestamps)
+│
+├── Excel/
 │   └── Executive_Overview.xlsx
+│       # Initial data cleaning, EDA, funnel construction,
+│       # and KPI validation before scaling analysis to SQL
 │
-├── Insights
+├── Insights/
 │   └── Insights.md
+│       # Written business insights, interpretations,
+│       # assumptions, limitations, and executive summaries
 │
-├── Power BI
+├── Power BI/
 │   └── Dashboard_Ecommerce.pbix
+│       # Interactive dashboards covering:
+│       # Executive Overview, Funnel Drop-off,
+│       # Product Performance, and Customer (RFM) Analytics
 │
-├── SQL
-│   ├── base.sql
-│   ├── customer_frequency.sql
-│   ├── customer_monetary.sql
-│   ├── customer_recency.sql
-│   ├── drop_off.sql
-│   ├── funnel.sql
-│   ├── funnel_base.sql
-│   ├── product_dashboard.sql
-│   ├── product_engagement.sql
-│   ├── product_performance.sql
-│   ├── product_revenue.sql
-│   ├── product_thresholds.sql
-│   ├── session_atc.sql
-│   └── session_views.sql
+├── SQL/
+│   ├── base.sql                # Base session-level table used as funnel foundation
+│   ├── customer_frequency.sql  # Frequency component of RFM (orders per customer)
+│   ├── customer_monetary.sql   # Monetary component of RFM (total spend per customer)
+│   ├── customer_recency.sql    # Recency component of RFM (days since last purchase)
+│   ├── drop_off.sql            # Drop-off flag logic for funnel stage exits
+│   ├── funnel.sql              # Final session-level funnel view (core analytical asset)
+│   ├── funnel_base.sql         # Cleaned session data before event aggregation
+│   ├── product_dashboard.sql   # Queries supporting product-focused Power BI visuals
+│   ├── product_engagement.sql  # Views & ATC aggregation at product level
+│   ├── product_performance.sql # Product-level KPIs (engagement & conversion)
+│   ├── product_revenue.sql     # Revenue contribution by product
+│   ├── product_thresholds.sql  # 75th percentile thresholds for high-engagement products
+│   ├── session_atc.sql         # Add-to-cart events aggregated at session level
+│   └── session_views.sql       # Product view events aggregated at session level
 │
-├── Screenshots
-│   ├── Business_Summary.png
-│   ├── Checkout_Drop.png
-│   ├── Customer_Analytics.png
-│   └── Funnel_&_Dropoff.png
+├── Screenshots/
+│   ├── Business_Summary.png    # Executive overview dashboard snapshot
+│   ├── Checkout_Drop.png       # Funnel drop-off & conversion visualization
+│   ├── Customer_Analytics.png  # RFM segmentation & customer behavior dashboard
+│   └── Funnel_&_Dropoff.png    # Full funnel visualization with stage-wise losses
 │
 └── README.md
+    # Project overview, methodology, findings,
+    # business recommendations, and assumptions
 ```
 
 ---
